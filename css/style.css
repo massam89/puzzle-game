@@ -11,9 +11,9 @@
 #game {
   width: 500px;
   height: 500px;
-  background-color: rgb(212, 137, 137);
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid black;
 }
 
 .item {
@@ -21,6 +21,8 @@
  justify-content: center; 
  align-items: center;
  border: 1px black solid;
+ background-color: rgb(221, 81, 81);
+ cursor: pointer;
 }
 
 .item span {
