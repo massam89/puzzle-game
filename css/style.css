@@ -1,0 +1,29 @@
+@import url(./base.css);
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#game {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(212, 137, 137);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+ display: flex;
+ justify-content: center; 
+ align-items: center;
+ border: 1px black solid;
+}
+
+.item span {
+  font-size: 35px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
