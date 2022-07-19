@@ -1,4 +1,5 @@
 import createRandomArray from "./createRandomArray.js"
+import checkReplacement from "./checkReplacement.js"
 
 export default function createGame(x_grid, y_grid) {
   const blockNum = x_grid * y_grid
@@ -33,15 +34,17 @@ export default function createGame(x_grid, y_grid) {
     gameEl.appendChild(element)
 
     if(i !== blockNum)
+
       element.addEventListener('click', (e) => {
   
-      const currentIndex = e.currentTarget.style.order
-
+      const currentIndex = +e.currentTarget.style.order
       const holeEl = Array.from(document.getElementsByClassName("hole"))[0];
-      
-      element.style.order = holeEl.style.order
 
-      holeEl.style.order = currentIndex
+      if(checkReplacement(currentIndex, +holeEl.style.order, +x_grid)){
+        element.style.order = holeEl.style.order
+        holeEl.style.order = currentIndex
+      }
+      
     })
 
   }

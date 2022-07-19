@@ -1,6 +1,6 @@
 export default function checkInput(e, x_grid, y_grid, input, element ){
 
-  if (e.target.value >= 10 || e.target.value < 3 || e.target.value == "") {
+  if (e.target.value > 10 || e.target.value < 3 || e.target.value == "") {
     alert("You can not choose number more than 10");
     x_grid = e.target.value > 0 ? 10 : 3;
     input[0].value = e.target.value > 0 ? 10 : 3;
