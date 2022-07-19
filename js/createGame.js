@@ -14,10 +14,13 @@ export default function createGame(x_grid, y_grid) {
     const span = document.createElement('span')
 
     if(i === blockNum) {
-      
+      span.innerText = ''
+
+      element.classList.add('hole')
+      element.style.cssText = `width: ${100/x_grid}%; height: ${100/y_grid}%; order: ${randomArray[blockNum - 1]}`
+      element.appendChild(span)
 
     } else {
-
       span.innerText = i
 
       element.classList.add('item')

@@ -10,12 +10,12 @@ import createGame from "./createGame.js"
   input.forEach(element => {
     element.addEventListener('change', (e) => {
       
-      if(e.target.value >= 10){
+      if(e.target.value >= 10 || e.target.value < 3 || e.target.value == ''){
         alert('You can not choose number more than 10')
-        x_grid = 10
-        input[0].value = 10
-        y_grid = 10
-        input[1].value = 10
+        x_grid = e.target.value > 0 ? 10 : 3
+        input[0].value = e.target.value > 0 ? 10 : 3
+        y_grid = e.target.value > 0 ? 10 : 3
+        input[1].value = e.target.value > 0 ? 10 : 3
       } else {
          switch(element.id){
           case 'x-grid':
