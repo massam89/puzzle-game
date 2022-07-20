@@ -43,9 +43,9 @@ export default function createGame(x_grid, y_grid) {
         if (checkReplacement(currentIndex, +holeEl.style.order, +x_grid)) {
           element.style.order = holeEl.style.order;
           holeEl.style.order = currentIndex;
+          setTimeout(checkWin, 300)
         }
 
-        checkWin();
       });
   }
 }
